@@ -1,6 +1,7 @@
 package com.matt.todoapp.todoapp.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 
@@ -13,7 +14,7 @@ public class Todo {
     private Long id;
     private String userName;
 
-
+    @Size(min = 10, message = "Enter at least 10 Characters...")
     private String description;
     private Date targetDate;
 
